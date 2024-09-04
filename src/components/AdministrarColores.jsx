@@ -34,8 +34,16 @@ const AdministrarColores = () => {
         <Card.Body>
           <div className="container">
             <div className="row">
-              <div className="col-3 divColor">
+            <div 
+  className="col-3" 
+  style={{
+    backgroundColor: color,
+    width:100,
+    height:100,
+  }}
+>
                 <div className="w-100"></div>
+                
               </div>
               <div className="col-9">
                 <div className="d-flex justify-content-center align-items-center align-content-center">
@@ -43,6 +51,7 @@ const AdministrarColores = () => {
                     value={color}
                     onChange={handleColor}
                     type="text"
+                    maxLength={7}
                     placeholder="Ingrese un color. Ej: blue"
                   />
                 </div>
